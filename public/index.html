@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>專題 AI 分析</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">畢業專題 · AI 助手</p>
+    <h1>整理重點，找到下一步</h1>
+    <p class="intro">貼上問卷結果、紀錄或其他文字，取得重點摘要與未來行動建議。</p>
+    <p id="setup" role="status"></p>
+    <form id="analysis-form">
+      <label for="text">分析內容</label>
+      <textarea id="text" name="text" rows="10" maxlength="10000" required placeholder="例如：本次問卷共收到 50 份回覆，30 人認為操作流程太複雜，15 人希望增加提醒功能，5 人沒有其他建議。"></textarea>
+      <div class="toolbar"><span id="count">0 / 10000 字</span><button type="submit">AI 分析</button></div>
+      <p class="hint">送出後，內容會傳至 OpenAI。請先移除不必要的個人資料；AI 建議仍需自行確認。</p>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="result" hidden aria-label="分析結果">
+      <h2>重點摘要</h2><p id="summary"></p>
+      <h2>主要重點</h2><ul id="key-points"></ul>
+      <h2>未來行動建議</h2><ol id="recommendations"></ol>
+    </section>
+  </main>
+</body>
+</html>
