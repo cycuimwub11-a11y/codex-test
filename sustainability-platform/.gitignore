@@ -1,0 +1,9 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+node_modules/
+local-dist/
+frontend/.env.local
+frontend/test-results/
+frontend/playwright-report/
